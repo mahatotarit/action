@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Token</title>
+    <link rel="stylesheet" href="../assets/css/token/index.css">
+</head>
+<body>
+
+    <div class="root">
+        <div class="title_desc_div">
+            <h1>Transfer Token</h1>
+            <div>
+                <small>If your wallet is compromised by a sweeper bot and you want to transfer tokens from your compromised wallet to another wallet, use this bot.</small>
+            </div>
+        </div>
+
+        <div class="inputs_div">
+            <form action="">
+                <div class="input_tags_div">
+                    <div class="label_parent">
+                        <label for="rpc_url_input" class="input_label"><b>1.</b> RPC URL</label> 
+                        <span class="input_info">
+                            <img src="../assets/image/svg/info.svg" alt="Info">
+                            <div class="tooltip_modal">
+                                <p>Enter the RPC URL of your blockchain node. This URL is necessary for connecting to the blockchain network.</p>
+                                <br>
+                                <p>You can use <a href="">Alchemy</a> or <a href="">Infura</a> and other providers.</p>
+                            </div>
+                        </span>
+                    </div>
+                    <input class="input_tag" id="rpc_url_input" type="text" name="rpc_url" placeholder="Enter RPC URL">
+                </div>
+
+                <div class="input_tags_div">
+                    <div class="label_parent">
+                        <label for="target_wallet_private_key_input" class="input_label"><b>2.</b> Target Wallet Private Key</label> 
+                        <span class="input_info">
+                            <img src="../assets/image/svg/info.svg" alt="Info">
+                            <div class="tooltip_modal">
+                                <p>Enter the private key of the target wallet. This is the wallet to which you want to transfer tokens.</p>
+                            </div>
+                        </span>
+                    </div>
+                    <input class="input_tag" id="target_wallet_private_key_input" type="text" name="target_wallet_private_key" placeholder="Enter Target Wallet Private Key">
+                </div>
+
+                <div class="input_tags_div">
+                    <div class="label_parent">
+                        <label for="your_wallet_private_key_input" class="input_label"><b>3.</b> Your Wallet Private Key</label> 
+                        <span class="input_info">
+                            <img src="../assets/image/svg/info.svg" alt="Info">
+                            <div class="tooltip_modal">
+                                <p>Enter your wallet's private key. This is the wallet you used to send funds to the compromised wallet for gas fees.</p>
+                            </div>
+                        </span>
+                    </div>
+                    <input class="input_tag" id="your_wallet_private_key_input" type="text" name="your_wallet_private_key" placeholder="Enter Your Wallet Private Key">
+                </div>
+
+                <div class="input_tags_div">
+                    <div class="label_parent">
+                        <label for="token_address_input" class="input_label"><b>4.</b> Token Contract Address</label> 
+                        <span class="input_info">
+                            <img src="../assets/image/svg/info.svg" alt="Info">
+                            <div class="tooltip_modal">
+                                <p>Enter the address of the token. This is the contract address of the token you want to transfer.</p>
+                            </div>
+                        </span>
+                    </div>
+                    <input class="input_tag" id="token_address_input" type="text" name="token_address" placeholder="Enter Token Contract Address">
+                </div>
+
+                <div class="input_tags_div">
+                    <div class="label_parent">
+                        <label for="token_recipient_wallet_address_input" class="input_label"><b>5.</b> Your Token Recipient Wallet Address</label> 
+                        <span class="input_info">
+                            <img src="../assets/image/svg/info.svg" alt="Info">
+                            <div class="tooltip_modal">
+                                <p>Enter the wallet address of the token recipient. This is the address of the compromised wallet's token recipient.</p>
+                            </div>
+                        </span>
+                    </div>
+                    <input class="input_tag" id="token_recipient_wallet_address_input" type="text" name="token_recipient_wallet_address" placeholder="Enter Your Token Recipient Wallet Address">
+                </div>
+
+                <div class="input_tags_div">
+                    <button class="next_btn">Next</button>
+                </div>
+            </form>
+        </div>
+
+        <footer></footer>
+
+    </div>
+
+</body>
+</html>
+<script>
+fetch('../common/footer.html')
+  .then(response => response.text())
+  .then(html => {
+    document.querySelector('footer').innerHTML = html;
+})
+.catch(error => console.error('Error fetching footer:', error));
+</script>

@@ -1,0 +1,145 @@
+@import url('../color.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: var(--links);
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--body_bg);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.root {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px rgb(151, 151, 151);
+    padding: 2rem;
+}
+
+.title_desc_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title_desc_div h1 {
+    margin-bottom: 0.5rem;
+}
+
+.title_desc_div small {
+    color: var(--desc_text);
+}
+
+.inputs_div {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: var(--body_bg);
+    border-radius: 10px;
+}
+
+.inputs_div input {
+    padding: 0.8rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--input_border_color);
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.inputs_div .input_tags_div {
+    margin: 1.5rem 0;
+}
+
+.inputs_div .label_parent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputs_div .input_label {
+    display: flex;
+    align-items: center;
+}
+
+.inputs_div .input_info {
+    position: relative;
+}
+
+.inputs_div .input_info img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.inputs_div .input_info {
+    position: relative;
+    display: inline-block;
+}
+
+.inputs_div .input_info img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.inputs_div .tooltip_modal {
+    visibility: hidden;
+    width: 300px;
+    background-color: var(--tooltip_modal_bg);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 1rem;
+    position: absolute;
+    z-index: 1;
+    top: -200%; 
+    left: -485%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 0.8rem;
+    transition: opacity 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.inputs_div .input_info:hover .tooltip_modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.inputs_div .next_btn {
+    padding: 0.8rem;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--next_btn_bg);
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inputs_div .next_btn:hover {
+    background-color: darken(var(--next_btn_bg), 10%);
+    color: var(--black);
+}
