@@ -27,7 +27,7 @@
                             <div class="tooltip_modal">
                                 <p>Enter the RPC URL of your blockchain node. This URL is necessary for connecting to the blockchain network.</p>
                                 <br>
-                                <p>You can use <a href="">Alchemy</a> or <a href="">Infura</a> and other providers.</p>
+                                <p>You can use <a href="" class="provider_link">Alchemy</a> or <a href="" class="provider_link">Infura</a> and other providers.</p>
                             </div>
                         </span>
                     </div>
@@ -96,6 +96,57 @@
 
     </div>
 
+    <!-- ===== modal ===== -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Select</h2>
+            <div class="select_type_modal_body">
+                <div class="select_container">
+                    <div class="option">
+                        <input type="radio" id="type_1" value="1" name="select_type" class="check_box_input">
+                        <label for="type_1" class="details">
+                            <div class="select_tag">Good</div>
+                            <div class="transaction_details">
+                                <label>
+                                    <input type="radio" checked value="2">
+                                    Total Transaction Cost: <span>$5</span>
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="type_2" value="2" name="select_type" class="check_box_input">
+                        <label for="type_2" class="details">
+                            <div class="select_tag">Better</div>
+                            <div class="transaction_details">
+                                <label>
+                                    <input type="radio" checked value="3">
+                                    Total Transaction Cost: <span>$5</span>
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="type_3" value="3" name="select_type" class="check_box_input">
+                        <label for="type_3" class="details">
+                            <div class="select_tag">Best</div>
+                            <div class="transaction_details">
+                                <label>
+                                    <input type="radio" checked value="4">
+                                    Total Transaction Cost: <span>$5</span>
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+                    <button id="saveButton" class="save_btn">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
 <script>
@@ -106,3 +157,5 @@ fetch('../common/footer.html')
 })
 .catch(error => console.error('Error fetching footer:', error));
 </script>
+
+<script src="../assets/js/token/index.js"></script>

@@ -1,11 +1,15 @@
 :root{
-    --body_bg:#7dc5ff;
+    --body_bg:#dadada;
     --white:#fff;
     --next_btn_bg:#0051ff;
     --desc_text:#666;
     --input_border_color:#ccc;
     --tooltip_modal_bg:#333;
     --black:#000000;
+    --halka_blue:rgb(0, 255, 234);
+    --green_halka_bg:#c8e6c9;
+
+    --next_btn_green:rgb(0, 185, 0);
 
     --links:#001aff;
 }
