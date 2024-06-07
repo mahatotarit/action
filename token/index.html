@@ -110,7 +110,7 @@
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="2">
-                                    Total Transaction Cost: <span>$5</span>
+                                    Total Transaction Cost: <span>$5</span> + Service Fee $1
                                 </label>
                             </div>
                         </label>
@@ -122,7 +122,7 @@
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="3">
-                                    Total Transaction Cost: <span>$5</span>
+                                    Total Transaction Cost: <span>$5</span> + Service Fee $1
                                 </label>
                             </div>
                         </label>
@@ -134,7 +134,7 @@
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="4">
-                                    Total Transaction Cost: <span>$5</span>
+                                    Total Transaction Cost: <span>$5</span> + Service Fee $1
                                 </label>
                             </div>
                         </label>
@@ -145,8 +145,40 @@
         </div>
     </div>
 
+    <!-- ======== checking modal ========== -->
+
+    <div id="small-modal" class="small-modal">
+        <div class="small-modal-content">
+            <span class="small-close-button">&times;</span>
+            <h2 class="requ_heading">Required</h2>
+            <ul class="requirements-list">
+                <li class="your_wallet_balance_li">1. Checking Your Wallet Balance:&nbsp;<span class="your_wallet_balance_span">fetching...</span> <span class="spinner"></span></li>
+                <li class="target_wallet_token_balance_li">2. Target Wallet Token Balance:&nbsp;<span class="target_wallet_token_balance_span">fetching...</span> <span class="spinner"></span></li>
+            </ul>
+            <br>
+            <div>
+                Burning Token Recipient Wallet Address : <span><small>0xE23566A571E19707da9c69A6Cb4e9c87687FEA64</small></span>
+            </div>
+            <button class="start_the_bot">Ok</button>
+        </div>
+    </div>
+
+    <!-- ===== terminal modal ===== -->
+    <div id="terminal-modal" class="terminal-modal">
+        <div class="terminal-modal-content">
+            <span class="terminal-close-button">&times;</span>
+            <h2>Terminal</h2>
+            <div class="terminal-body">
+                <!-- Terminal sdsscontent goes here -->sdfsdfsd
+            </div>
+        </div>
+    </div>
 
 
+
+    <!-- Flower explosion container -->
+    <div class="flower-container" id="flower-container"></div>
+    
 </body>
 </html>
 <script>

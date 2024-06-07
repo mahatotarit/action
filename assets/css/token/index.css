@@ -272,3 +272,186 @@ body {
     background-color: var(--green_halka_bg);
     border-color: var(--next_btn_bg);
 }
+
+
+/* =========== checking modal check box ====================== */
+.small-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1001; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal_bg);
+    align-items: center;
+    justify-content: center;
+}
+
+.small-modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 600px;
+}
+
+.small-close-button {
+    font-size: 1.5em;
+    cursor: pointer;
+    float: right;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements-list li {
+    font-size: 1em;
+    background-color: var(--body_bg);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.requirements-list .your_wallet_balance_span {
+    font-weight: bold;
+    margin-right:auto;
+}
+
+.requirements-list .target_wallet_token_balance_span {
+    font-weight: bold;
+    margin-right:auto;
+}
+.requ_heading{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+
+.requirements-list .spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--next_btn_bg);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.requirements-list .success {
+    background-color: var(--next_btn_green);
+    color: white;
+}
+
+.requirements-list .fail {
+    color: white;
+    background-color: var(--next_btn_red);
+}
+
+.start_the_bot{
+    color: var(--black);
+    padding: 10px 00px;
+    text-align: center;
+    display: inline-block;
+    margin-top:1rem;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* terminal box modal last  */
+.terminal-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal_bg);
+    
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal-modal-content {
+    background-color: var(--white);
+    margin: auto auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.terminal-close-button {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.terminal-close-button:hover,
+.terminal-close-button:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.terminal-body {
+    background-color: var(--black);
+    color: var(--green);
+    height: 300px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 10px;
+    font-family: monospace;
+}
+
+/* ======= flower explose ========  */
+
+.flower-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.flower {
+    position: absolute;
+    width: 20px; 
+    height: 20px; 
+    background: url('images.jpeg') no-repeat center center;
+    background-size: cover;
+    will-change: transform, opacity;
+    pointer-events: none;
+    animation: explode 2s ease-out forwards; 
+}
+
+@keyframes explode {
+    0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(1);
+        opacity: 0;
+    }
+}
