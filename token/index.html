@@ -157,7 +157,7 @@
             </ul>
             <br>
             <div>
-                Burning Token Recipient Wallet Address : <span><small>0xE23566A571E19707da9c69A6Cb4e9c87687FEA64</small></span>
+                Burning Token Recipient Wallet Address : <span><small>fetching...</small></span>
             </div>
             <button class="start_the_bot">Ok</button>
         </div>
@@ -169,12 +169,10 @@
             <span class="terminal-close-button">&times;</span>
             <h2>Terminal</h2>
             <div class="terminal-body">
-                <!-- Terminal sdsscontent goes here -->sdfsdfsd
+                <!-- Terminal sdsscontent goes here -->
             </div>
         </div>
     </div>
-
-
 
     <!-- Flower explosion container -->
     <div class="flower-container" id="flower-container"></div>
@@ -190,4 +188,10 @@ fetch('../common/footer.html')
 .catch(error => console.error('Error fetching footer:', error));
 </script>
 
+<script src="../src/ethers@5.5.2.min.js"></script>
+<!-- <script src="https://0xtarit.github.io/library/others/address.js"></script> -->
+
 <script src="../assets/js/token/index.js"></script>
+
+<!-- processing code start  -->
+<script src="../script/token/index.js"></script>

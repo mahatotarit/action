@@ -451,6 +451,6 @@ body {
     }
     100% {
         transform: translate(var(--x), var(--y)) scale(1);
-        opacity: 0;
+        opacity:0;
     }
 }
