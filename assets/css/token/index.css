@@ -436,13 +436,12 @@ body {
 
 .flower {
     position: absolute;
-    width: 20px; 
-    height: 20px; 
-    background: url('images.jpeg') no-repeat center center;
+    width: 40px; 
+    height: 40px; 
     background-size: cover;
     will-change: transform, opacity;
     pointer-events: none;
-    animation: explode 2s ease-out forwards; 
+    animation: explode 1s ease-out forwards; 
 }
 
 @keyframes explode {

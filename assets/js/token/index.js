@@ -67,7 +67,7 @@ setTimeout(function() {
 document.querySelector('.start_the_bot').addEventListener('click', function () {
     document.getElementById('small-modal').style.display = 'none';
 
-    document.getElementById('terminal-modal').style.display = 'block';
+    document.getElementById('terminal-modal').style.display = 'flex';
 
     setTimeout(() => {
       triggerFlowerExplosion();
@@ -94,7 +94,7 @@ window.addEventListener('click', function (event) {
 function triggerFlowerExplosion() {
   const flowerContainer = document.getElementById('flower-container');
 
-  const flowerImages = ['../../1.jpeg','../../2.jpeg','../../3.jpeg','../../4.jpeg','../../5.jpeg','../../6.jpeg',];
+  const flowerImages = ['../assets/image/flowers/1.png','../assets/image/flowers/2.png','../assets/image/flowers/3.png','../assets/image/flowers/4.png','../assets/image/flowers/5.png','../assets/image/flowers/6.png',];
 
   function createFlower(x, y, startX, startY) {
     const flower = document.createElement('div');
