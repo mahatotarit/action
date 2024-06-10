@@ -18,7 +18,8 @@
         </div>
 
         <div class="inputs_div">
-            <form action="">
+            <form action="" id="bot_details_form">
+
                 <div class="input_tags_div">
                     <div class="label_parent">
                         <label for="rpc_url_input" class="input_label"><b>1.</b> RPC URL</label> 
@@ -31,7 +32,7 @@
                             </div>
                         </span>
                     </div>
-                    <input class="input_tag" id="rpc_url_input" type="text" name="rpc_url" placeholder="Enter RPC URL">
+                    <input class="input_tag" id="rpc_url_input" type="text" name="rpc_url" placeholder="Enter RPC URL" required>
                 </div>
 
                 <div class="input_tags_div">
@@ -44,7 +45,7 @@
                             </div>
                         </span>
                     </div>
-                    <input class="input_tag" id="target_wallet_private_key_input" type="text" name="target_wallet_private_key" placeholder="Enter Target Wallet Private Key">
+                    <input class="input_tag" id="target_wallet_private_key_input" type="text" name="target_wallet_private_key" placeholder="Enter Target Wallet Private Key" required>
                 </div>
 
                 <div class="input_tags_div">
@@ -53,11 +54,11 @@
                         <span class="input_info">
                             <img src="../assets/image/svg/info.svg" alt="Info">
                             <div class="tooltip_modal">
-                                <p>Enter your wallet's private key. This is the wallet you used to send funds to the compromised wallet for gas fees.</p>
+                                <p>Enter your wallet's private key. This is the wallet you used to send gas fee to the compromised wallet for gas fees.</p>
                             </div>
                         </span>
                     </div>
-                    <input class="input_tag" id="your_wallet_private_key_input" type="text" name="your_wallet_private_key" placeholder="Enter Your Wallet Private Key">
+                    <input class="input_tag" id="your_wallet_private_key_input" type="text" name="your_wallet_private_key" placeholder="Enter Your Wallet Private Key" required>
                 </div>
 
                 <div class="input_tags_div">
@@ -70,7 +71,7 @@
                             </div>
                         </span>
                     </div>
-                    <input class="input_tag" id="token_address_input" type="text" name="token_address" placeholder="Enter Token Contract Address">
+                    <input class="input_tag" id="token_address_input" type="text" name="token_address" placeholder="Enter Token Contract Address" required>
                 </div>
 
                 <div class="input_tags_div">
@@ -83,18 +84,21 @@
                             </div>
                         </span>
                     </div>
-                    <input class="input_tag" id="token_recipient_wallet_address_input" type="text" name="token_recipient_wallet_address" placeholder="Enter Your Token Recipient Wallet Address">
+                    <input class="input_tag" id="token_recipient_wallet_address_input" type="text" name="token_recipient_wallet_address" placeholder="Enter Your Token Recipient Wallet Address" required>
                 </div>
 
                 <div class="input_tags_div">
-                    <button class="next_btn">Next</button>
+                    <button class="next_btn" id="next_btn" type="submit">Next</button>
                 </div>
+
             </form>
         </div>
 
         <footer></footer>
 
     </div>
+
+    <div id="notification-container"></div>
 
     <!-- ===== modal ===== -->
     <div id="modal" class="modal">
@@ -110,36 +114,38 @@
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="2">
-                                    Total Transaction Cost: <span>$5</span> + Service Fee $1
+                                    Total Transaction Cost: <span>fetching...</span>
                                 </label>
                             </div>
                         </label>
                     </div>
                     <div class="option">
-                        <input type="radio" id="type_2" value="2" name="select_type" class="check_box_input">
+                        <input type="radio" id="type_2" checked value="3" name="select_type" class="check_box_input">
                         <label for="type_2" class="details">
                             <div class="select_tag">Better</div>
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="3">
-                                    Total Transaction Cost: <span>$5</span> + Service Fee $1
+                                    Total Transaction Cost: <span>fetching...</span>
                                 </label>
                             </div>
                         </label>
                     </div>
+
                     <div class="option">
-                        <input type="radio" id="type_3" value="3" name="select_type" class="check_box_input">
+                        <input type="radio" id="type_3" value="4" name="select_type" class="check_box_input">
                         <label for="type_3" class="details">
                             <div class="select_tag">Best</div>
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="4">
-                                    Total Transaction Cost: <span>$5</span> + Service Fee $1
+                                    Total Transaction Cost: <span>fetching...</span>
                                 </label>
                             </div>
                         </label>
                     </div>
-                    <button id="saveButton" class="save_btn">Start</button>
+
+                    <button id="saveButton" class="save_btn">Save</button>
                 </div>
             </div>
         </div>
@@ -179,6 +185,7 @@
     
 </body>
 </html>
+
 <script>
 fetch('../common/footer.html')
   .then(response => response.text())
@@ -189,7 +196,7 @@ fetch('../common/footer.html')
 </script>
 
 <script src="../src/ethers@5.5.2.min.js"></script>
-<!-- <script src="https://0xtarit.github.io/library/others/address.js"></script> -->
+<!-- <script src="https://0xtarit.github.io/library/others/test.address.js"></script> -->
 
 <script src="../assets/js/token/index.js"></script>
 
