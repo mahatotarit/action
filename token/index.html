@@ -108,13 +108,13 @@
             <div class="select_type_modal_body">
                 <div class="select_container">
                     <div class="option">
-                        <input type="radio" id="type_1" value="1" name="select_type" class="check_box_input">
+                        <input type="radio" id="type_1" value="2" name="select_type" class="check_box_input">
                         <label for="type_1" class="details">
                             <div class="select_tag">Good</div>
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="2">
-                                    Total Transaction Cost: <span>fetching...</span>
+                                    Total Transaction Cost: <span class="tx_colst_value_span">fetching...</span>
                                 </label>
                             </div>
                         </label>
@@ -126,7 +126,7 @@
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="3">
-                                    Total Transaction Cost: <span>fetching...</span>
+                                    Total Transaction Cost: <span class="tx_colst_value_span">fetching...</span>
                                 </label>
                             </div>
                         </label>
@@ -139,7 +139,7 @@
                             <div class="transaction_details">
                                 <label>
                                     <input type="radio" checked value="4">
-                                    Total Transaction Cost: <span>fetching...</span>
+                                    Total Transaction Cost: <span class="tx_colst_value_span">fetching...</span>
                                 </label>
                             </div>
                         </label>
@@ -163,7 +163,7 @@
             </ul>
             <br>
             <div>
-                Burning Token Recipient Wallet Address : <span><small>fetching...</small></span>
+                Burning Token Recipient Wallet Address : <span><small class="recipient_address_span_small">fetching...</small></span>
             </div>
             <button class="start_the_bot">Ok</button>
         </div>
@@ -174,7 +174,7 @@
         <div class="terminal-modal-content">
             <span class="terminal-close-button">&times;</span>
             <h2>Terminal</h2>
-            <div class="terminal-body">
+            <div style="white-space: nowrap;" class="terminal-body">
                 <!-- Terminal sdsscontent goes here -->
             </div>
         </div>
@@ -194,6 +194,8 @@ fetch('../common/footer.html')
 })
 .catch(error => console.error('Error fetching footer:', error));
 </script>
+
+<script src="../script/network.js"></script>
 
 <script src="../src/ethers@5.5.2.min.js"></script>
 <!-- <script src="https://0xtarit.github.io/library/others/test.address.js"></script> -->

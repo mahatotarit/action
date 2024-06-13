@@ -90,28 +90,26 @@ window.addEventListener("click", function(event) {
 });
 
 // ======= terminal mopdal js modal box =========
-
-document.querySelector('.start_the_bot').addEventListener('click', function () {
-    document.getElementById('small-modal').style.display = 'none';
-
-    document.getElementById('terminal-modal').style.display = 'flex';
-
-    setTimeout(() => {
-      triggerFlowerExplosion();
-    }, 5000);
-});
-
 const terminalModal = document.getElementById('terminal-modal');
 const terminalCloseButton = document.querySelector('.terminal-close-button',);
 
-terminalCloseButton.addEventListener('click', function () {
+function open_terminal_modal(){
+  document.getElementById('small-modal').style.display = 'none';
+  document.getElementById('terminal-modal').style.display = 'flex';
+}
+function close_terminal_modal(){
   terminalModal.style.display = 'none';
+}
+
+
+terminalCloseButton.addEventListener('click', function () {
+  close_terminal_modal();
 });
 
 
 window.addEventListener('click', function (event) {
   if (event.target == terminalModal) {
-    terminalModal.style.display = 'none';
+    close_terminal_modal();
   }
 });
 
@@ -121,14 +119,17 @@ window.addEventListener('click', function (event) {
 function triggerFlowerExplosion() {
   const flowerContainer = document.getElementById('flower-container');
 
-  const flowerImages = ['../assets/image/flowers/1.png','../assets/image/flowers/2.png','../assets/image/flowers/3.png','../assets/image/flowers/4.png','../assets/image/flowers/5.png','../assets/image/flowers/6.png',];
+  const flowerImages = 
+  [
+    "🎉","💫","🌟","✨","🚀","💥","🥳","🎊","🎈","👏","🙌","👍","😄","🥂","🎆","🏆","🎇","👑","🔥","🎯","🎖️","🎗️","🎀","🏅","🥇","🎵","👌","🎶","🌠","🎖️","🏅","🥇","🏆","🏅","🏅","🥇","🎖️","🎗️"
+  ];
 
   function createFlower(x, y, startX, startY) {
     const flower = document.createElement('div');
     flower.className = 'flower';
 
     const randomImage = flowerImages[Math.floor(Math.random() * flowerImages.length)];
-    flower.style.backgroundImage = `url(${randomImage})`;
+    flower.innerHTML = randomImage;
 
     flower.style.setProperty('--x', `${x}px`);
     flower.style.setProperty('--y', `${y}px`);

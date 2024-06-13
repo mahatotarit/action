@@ -37,6 +37,16 @@
     color:black;
 }
 
+.success {
+    background-color: #adffb0 !important; 
+    color:black !important; 
+}
+
+.failure {
+    background-color: #ffb0aa !important; 
+    color:black !important; 
+}
+
 .notification .close-btn {
     position: absolute;
     top: 10px;
